@@ -13,3 +13,4 @@ async function fetchData(url){
 }
 
 module.exports = fetchData;
+
