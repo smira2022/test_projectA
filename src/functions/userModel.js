@@ -21,3 +21,5 @@ const createUser = async (name, email, password, age) =>{
     }
 
 }
+
+module.exports = {createUser, User};
