@@ -23,6 +23,4 @@ jobs:
         run: npx wait-on http://localhost:3000
 
       - name: Run Cypress tests
-        uses: npm run cypress:run
-        with:
-          runTests: true
+        run: npm run cypress:run
