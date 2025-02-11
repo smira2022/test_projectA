@@ -39,14 +39,16 @@ describe('Login Page', ()=>{
   });
 
 
-  it('should only submit once', ()=> {
+  it('if submitted more than once, raise exception', ()=> {
     //Arrange
     cy.get('#email').type('test@example.com');
     cy.get('#password').type('password123');
 
     //Act
-    cy.get('#login-button').click();
-
+    for (var i=0; i<3; i++) {
+      cy.get('#login-button').click();
+    }
+   
     
     //Assert
     cy.get('#submitCount').should('have.text', '1');
